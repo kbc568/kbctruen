@@ -1,0 +1,97 @@
+body {
+  background-color: rgba(210, 222, 222, 0.68);
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+}
+
+.fixed {
+  background-color: rgba(0, 0, 0, 0.22);
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+.fixed a{
+  color: black;
+  text-decoration: none;
+  position: fixed;
+  right: 10px;
+  top: 0;
+  height: inherit;
+}
+
+.me {
+  /* border: 1px solid red; */
+
+  display: flex;
+  height: 150px;
+  /* line-height: 150px; */
+  width: 500px;
+  padding: 15px;
+  font-size: 25px;
+  position: relative;
+  top: 25%;
+}
+.me div {
+  position: relative;
+  /* border: 1px solid blue; */
+  width: 28%;
+  height: 150px;
+  margin: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  color: black;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.me div span {
+  position: absolute;
+  background-color: black;
+  color: white;
+  width: 275px;
+  top: 105px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  left: 50%;
+  transform: translate(-50%);
+
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+
+}
+.me div:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+/*
+----전에 했던 부분
+.me div span {
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+/* .me #age:hover p{
+  display: block;
+  visibility: visible;
+}
+----이건 내가 전에 했던 부분
+.me div:hover span {
+  display: block;
+  visibility: visible;
+  line-height: normal;
+  width: auto;
+}
+----
+*/

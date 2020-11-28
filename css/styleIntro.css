@@ -1,0 +1,95 @@
+/* @import url('https://fonts.googlepis.com/css?family=Raleway&dispaly=swap');
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 300;
+  /* background-color: royalblue; */
+  margin: 0;
+  overflow: auto;
+}
+
+.fixed {
+  background-color: rgba(0, 0, 0, 0.22);
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+/* .fixed a{
+  color: black;
+  text-decoration: none;
+  position: fixed;
+  right: 10px;
+  top: 0;
+  height: inherit;
+} */
+
+.gnb p {
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.gnb {
+  /* top: 50px; */
+  transform: translateY(50px);
+  left: 50px;
+  line-height: 0.7em;
+}
+
+.gnb p {
+  display: block;
+  font-size: 30px;
+  margin: 30px 0;
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+  opacity: 0.3;
+}
+
+.gnb p:hover {
+  opacity: 0.8;
+}
+
+.gnb p.active::before {
+  content: '';
+  margin: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.gnb p.active{
+  opacity: 1;
+}
+
+p.active {
+  /* color: red; */
+}
+
+.content {
+  width: auto;
+  border: solid black 1px;
+  margin: 20px;
+  /* margin-right: 50px; */
+}
+.content p {
+  cursor: text;
+  opacity: 1;
+  /* border: solid 1px red; */
+  /* top: 0;
+  left: 0; */
+  display: none;
+  line-height: 1.2em;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 40px;
+  height: auto;
+  margin: 10px;
+}
+.content p.active {
+  display: inline-block;
+}

@@ -1,0 +1,118 @@
+body {
+  background-color: rgba(236, 242, 178, 0.93);
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.fixed {
+  background-color: rgba(0, 0, 0, 0.22);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  /* border: 1px solid red; */
+  width: 1000px;
+  height: 300px;
+}
+
+.square {
+  flex: 1;
+  width: 300px;
+  height: 300px;
+  position: relative;
+
+  box-sizing: content-box;
+}
+
+.square span {
+
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 45% 60% 46% 55% / 40% 45% 55% 65%;
+  transition: 0.5s;
+  animation: circle 5s linear infinite;
+}
+
+.square:nth-child(1):hover span {
+  background-color: rgb(222, 40, 40);
+  border: none;
+}
+
+.square:nth-child(2):hover span {
+  background-color: rgb(67, 219, 78);
+  border: none;
+}
+
+.square:nth-child(3):hover span {
+  background-color: rgb(72, 183, 203);
+  border: none;
+}
+
+.square span:nth-child(1) {
+  animation: circle 6s linear infinite;
+}
+
+.square span:nth-child(2) {
+  animation: circle 4s linear infinite;
+  animation-delay: 1s;
+}
+
+.square span:nth-child(3) {
+  animation: circle 10s linear infinite;
+  animation-direction: reverse;
+}
+
+.square:hover span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.square:hover span:nth-child(2) {
+  opacity: 0.4;
+}
+
+.square:hover span:nth-child(3) {
+  opacity: 0.6;
+}
+
+
+.square div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: inherit;
+  text-align: center;
+  color: black;
+}
+
+.square div a {
+  color: black;
+  border: 1px solid black;
+  border-radius: 45% 60% 46% 55% / 40% 45% 55% 65%;
+  padding: 7px;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

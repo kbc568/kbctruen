@@ -1,0 +1,20 @@
+.fixed {
+  background-color: rgba(222, 181, 237, 0.6);
+  border: 1px solid red;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+.fixed h2::before{
+  content: '안녕하세요';
+}
+.fixed a{
+  color: black;
+  text-decoration: none;
+  position: fixed;
+  right: 10px;
+  top: 0;
+  height: inherit;
+}
